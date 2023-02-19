@@ -1,6 +1,6 @@
 [gd_scene load_steps=18 format=3 uid="uid://qi80nkpce03v"]
 
-[ext_resource type="Texture2D" uid="uid://bl8y2m7fxixtv" path="res://addons/quaternius-ultimate-spaceships-pack/demo/StarMap2.png" id="1"]
+[ext_resource type="Texture2D" uid="uid://bejyp0bd2vv66" path="res://addons/quaternius-ultimate-spaceships-pack/demo/stars-background.jpg" id="1_go3ra"]
 [ext_resource type="Script" path="res://addons/quaternius-ultimate-spaceships-pack/demo/spaceship.gd" id="2"]
 [ext_resource type="PackedScene" uid="uid://bbfcrgwshh0i3" path="res://addons/quaternius-ultimate-spaceships-pack/meshes/bob/bob_blue.tscn" id="3"]
 [ext_resource type="Script" path="res://addons/quaternius-ultimate-spaceships-pack/demo/camera.gd" id="4"]
@@ -16,7 +16,7 @@
 [ext_resource type="PackedScene" uid="uid://n0fonimiqi88" path="res://addons/quaternius-ultimate-spaceships-pack/meshes/executioner/executioner_purple.tscn" id="14"]
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_8ya5u"]
-panorama = ExtResource("1")
+panorama = ExtResource("1_go3ra")
 
 [sub_resource type="Sky" id="1"]
 sky_material = SubResource("PanoramaSkyMaterial_8ya5u")
