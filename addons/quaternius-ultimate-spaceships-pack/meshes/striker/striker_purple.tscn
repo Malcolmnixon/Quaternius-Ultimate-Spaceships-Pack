@@ -1,10 +1,10 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=4 format=3 uid="uid://dmtxnam3lb54h"]
 
-[ext_resource path="res://addons/quaternius-ultimate-spaceships-pack/meshes/striker/mesh/striker_base.tscn" type="PackedScene" id=1]
-[ext_resource path="res://addons/quaternius-ultimate-spaceships-pack/meshes/striker/textures/Striker_Purple.png" type="Texture" id=2]
+[ext_resource type="PackedScene" path="res://addons/quaternius-ultimate-spaceships-pack/meshes/striker/mesh/striker_base.tscn" id="1"]
+[ext_resource type="Texture2D" uid="uid://drs8yxglec2d4" path="res://addons/quaternius-ultimate-spaceships-pack/meshes/striker/textures/Striker_Purple.png" id="2"]
 
-[sub_resource type="SpatialMaterial" id=1]
-albedo_texture = ExtResource( 2 )
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_kgrq6"]
+albedo_texture = ExtResource("2")
 
-[node name="StrikerPurple" instance=ExtResource( 1 )]
-material/0 = SubResource( 1 )
+[node name="StrikerPurple" instance=ExtResource("1")]
+surface_material_override/0 = SubResource("StandardMaterial3D_kgrq6")

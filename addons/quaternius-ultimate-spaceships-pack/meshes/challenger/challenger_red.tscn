@@ -1,10 +1,10 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=4 format=3 uid="uid://brwutlaf886lc"]
 
-[ext_resource path="res://addons/quaternius-ultimate-spaceships-pack/meshes/challenger/mesh/challenger_base.tscn" type="PackedScene" id=1]
-[ext_resource path="res://addons/quaternius-ultimate-spaceships-pack/meshes/challenger/textures/Challenger_Red.png" type="Texture" id=2]
+[ext_resource type="PackedScene" path="res://addons/quaternius-ultimate-spaceships-pack/meshes/challenger/mesh/challenger_base.tscn" id="1"]
+[ext_resource type="Texture2D" uid="uid://deqm05tk32gn3" path="res://addons/quaternius-ultimate-spaceships-pack/meshes/challenger/textures/Challenger_Red.png" id="2"]
 
-[sub_resource type="SpatialMaterial" id=1]
-albedo_texture = ExtResource( 2 )
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_xsuat"]
+albedo_texture = ExtResource("2")
 
-[node name="ChallengerRed" instance=ExtResource( 1 )]
-material/0 = SubResource( 1 )
+[node name="ChallengerRed" instance=ExtResource("1")]
+surface_material_override/0 = SubResource("StandardMaterial3D_xsuat")

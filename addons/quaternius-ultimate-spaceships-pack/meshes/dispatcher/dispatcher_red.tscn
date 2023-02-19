@@ -1,5 +1,10 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=4 format=3 uid="uid://dnbdpsvfbnini"]
 
-[ext_resource path="res://addons/quaternius-ultimate-spaceships-pack/meshes/dispatcher/mesh/dispatcher_base.tscn" type="PackedScene" id=1]
+[ext_resource type="PackedScene" path="res://addons/quaternius-ultimate-spaceships-pack/meshes/dispatcher/mesh/dispatcher_base.tscn" id="1"]
+[ext_resource type="Texture2D" uid="uid://buo5hlkogxo76" path="res://addons/quaternius-ultimate-spaceships-pack/meshes/dispatcher/textures/Dispatcher_Red.png" id="2_1v3o4"]
 
-[node name="DispatcherRed" instance=ExtResource( 1 )]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_si8gd"]
+albedo_texture = ExtResource("2_1v3o4")
+
+[node name="DispatcherRed" instance=ExtResource("1")]
+surface_material_override/0 = SubResource("StandardMaterial3D_si8gd")

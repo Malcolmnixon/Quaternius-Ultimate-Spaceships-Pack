@@ -1,4 +1,4 @@
-extends Camera
+extends Camera3D
 
 
 # Declare member variables here. Examples:
@@ -15,7 +15,7 @@ func _ready() -> void:
 func _input(event):
 	# Handle button presses
 	if event is InputEventMouseButton:
-		if event.button_index == BUTTON_RIGHT:
+		if event.button_index == MOUSE_BUTTON_RIGHT:
 				if event.pressed:
 					Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 				else:
@@ -23,8 +23,8 @@ func _input(event):
 
 	# Handle mouse movement
 	if event is InputEventMouseMotion:
-		if event.button_mask & BUTTON_RIGHT:
-			transform.basis *= Basis(
+		if event.button_mask & MOUSE_BUTTON_RIGHT:
+			transform.basis *= Basis.from_euler(
 				Vector3(
 					-event.relative.y / 200.0, 
 					-event.relative.x / 200.0, 

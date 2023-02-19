@@ -1,4 +1,4 @@
-extends Spatial
+extends Node3D
 
 
 ## Flight speed
@@ -21,7 +21,7 @@ func _ready() -> void:
 	_random.randomize()
 	
 	# Pick a random position
-	global_translation = _random_position()
+	global_position = _random_position()
 
 	# Pick a random target
 	_new_target = _random.randf_range(3.0, 6.0)
@@ -40,7 +40,7 @@ func _process(delta: float) -> void:
 	global_transform = global_transform.interpolate_with(to_target, delta).orthonormalized()
 
 	# Move forwards
-	global_translation += -global_transform.basis.z * delta * SPEED
+	global_position += -global_transform.basis.z * delta * SPEED
 
 # Generate a random position
 func _random_position() -> Vector3:
