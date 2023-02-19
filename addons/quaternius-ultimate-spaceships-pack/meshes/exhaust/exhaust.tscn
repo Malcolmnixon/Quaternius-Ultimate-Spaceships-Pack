@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://addons/quaternius-ultimate-spaceships-pack/meshes/exhaust/exhaust_material.tres" type="Material" id=1]
+
+[sub_resource type="CylinderMesh" id=1]
+material = ExtResource( 1 )
+top_radius = 0.0
+bottom_radius = 0.5
+height = 4.0
+radial_segments = 12
+rings = 0
+
+[node name="Exhaust" type="MeshInstance" groups=["exhaust"]]
+transform = Transform( -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0, 0, 1, 2, 0, 0 )
+mesh = SubResource( 1 )

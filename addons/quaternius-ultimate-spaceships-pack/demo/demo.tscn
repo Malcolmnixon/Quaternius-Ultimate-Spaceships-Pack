@@ -1,0 +1,113 @@
+[gd_scene load_steps=17 format=2]
+
+[ext_resource path="res://addons/quaternius-ultimate-spaceships-pack/demo/StarMap2.png" type="Texture" id=1]
+[ext_resource path="res://addons/quaternius-ultimate-spaceships-pack/demo/spaceship.gd" type="Script" id=2]
+[ext_resource path="res://addons/quaternius-ultimate-spaceships-pack/meshes/bob/bob_blue.tscn" type="PackedScene" id=3]
+[ext_resource path="res://addons/quaternius-ultimate-spaceships-pack/demo/camera.gd" type="Script" id=4]
+[ext_resource path="res://addons/quaternius-ultimate-spaceships-pack/meshes/insurgent/insurgent_blue.tscn" type="PackedScene" id=5]
+[ext_resource path="res://addons/quaternius-ultimate-spaceships-pack/meshes/omen/omen_green.tscn" type="PackedScene" id=6]
+[ext_resource path="res://addons/quaternius-ultimate-spaceships-pack/meshes/imperial/imperial_red.tscn" type="PackedScene" id=7]
+[ext_resource path="res://addons/quaternius-ultimate-spaceships-pack/meshes/spitfire/spitfire_purple.tscn" type="PackedScene" id=8]
+[ext_resource path="res://addons/quaternius-ultimate-spaceships-pack/meshes/dispatcher/dispatcher_orange.tscn" type="PackedScene" id=9]
+[ext_resource path="res://addons/quaternius-ultimate-spaceships-pack/meshes/pancake/pancake_orange.tscn" type="PackedScene" id=10]
+[ext_resource path="res://addons/quaternius-ultimate-spaceships-pack/meshes/challenger/challenger_green.tscn" type="PackedScene" id=11]
+[ext_resource path="res://addons/quaternius-ultimate-spaceships-pack/meshes/striker/striker_red.tscn" type="PackedScene" id=12]
+[ext_resource path="res://addons/quaternius-ultimate-spaceships-pack/meshes/zenith/zenith_blue.tscn" type="PackedScene" id=13]
+[ext_resource path="res://addons/quaternius-ultimate-spaceships-pack/meshes/executioner/executioner_purple.tscn" type="PackedScene" id=14]
+
+[sub_resource type="PanoramaSky" id=1]
+panorama = ExtResource( 1 )
+
+[sub_resource type="Environment" id=2]
+background_mode = 2
+background_sky = SubResource( 1 )
+ambient_light_color = Color( 0.282353, 0.282353, 0.282353, 1 )
+ambient_light_sky_contribution = 0.0
+
+[node name="Demo" type="Spatial"]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource( 2 )
+
+[node name="DirectionalLight" type="DirectionalLight" parent="."]
+transform = Transform( -0.5, -0.433013, 0.75, 0, 0.866025, 0.5, -0.866025, 0.25, -0.433013, 0, 0, 0 )
+
+[node name="Camera" type="Camera" parent="."]
+far = 300.0
+script = ExtResource( 4 )
+
+[node name="Spaceship1" type="Spatial" parent="."]
+script = ExtResource( 2 )
+
+[node name="BobBlue" parent="Spaceship1" instance=ExtResource( 3 )]
+transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 0 )
+
+[node name="Spaceship2" type="Spatial" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 0, 0 )
+script = ExtResource( 2 )
+
+[node name="ChallengerGreen" parent="Spaceship2" instance=ExtResource( 11 )]
+transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 0 )
+
+[node name="Spaceship3" type="Spatial" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 20, 0, 0 )
+script = ExtResource( 2 )
+
+[node name="DispatcherOrange" parent="Spaceship3" instance=ExtResource( 9 )]
+transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 0 )
+
+[node name="Spaceship4" type="Spatial" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 30, 0, 0 )
+script = ExtResource( 2 )
+
+[node name="ExecutionerPurple" parent="Spaceship4" instance=ExtResource( 14 )]
+transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 0 )
+
+[node name="Spaceship5" type="Spatial" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 40, 0, 0 )
+script = ExtResource( 2 )
+
+[node name="ImperialRed" parent="Spaceship5" instance=ExtResource( 7 )]
+transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 0 )
+
+[node name="Spaceship6" type="Spatial" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 50, 0, 0 )
+script = ExtResource( 2 )
+
+[node name="InsurgentBlue" parent="Spaceship6" instance=ExtResource( 5 )]
+transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 0 )
+
+[node name="Spaceship7" type="Spatial" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 60, 0, 0 )
+script = ExtResource( 2 )
+
+[node name="OmenGreen" parent="Spaceship7" instance=ExtResource( 6 )]
+transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 0 )
+
+[node name="Spaceship8" type="Spatial" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 70, 0, 0 )
+script = ExtResource( 2 )
+
+[node name="PancakeOrange" parent="Spaceship8" instance=ExtResource( 10 )]
+transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 0 )
+
+[node name="Spaceship9" type="Spatial" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 80, 0, 0 )
+script = ExtResource( 2 )
+
+[node name="SpitfirePurple" parent="Spaceship9" instance=ExtResource( 8 )]
+transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 0 )
+
+[node name="Spaceship10" type="Spatial" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 90, 0, 0 )
+script = ExtResource( 2 )
+
+[node name="StrikerRed" parent="Spaceship10" instance=ExtResource( 12 )]
+transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 0 )
+
+[node name="Spaceship11" type="Spatial" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 100, 0, 0 )
+script = ExtResource( 2 )
+
+[node name="ZenithBlue" parent="Spaceship11" instance=ExtResource( 13 )]
+transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 0 )

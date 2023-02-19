@@ -1,0 +1,10 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://addons/quaternius-ultimate-spaceships-pack/meshes/imperial/mesh/imperial_base.tscn" type="PackedScene" id=1]
+[ext_resource path="res://addons/quaternius-ultimate-spaceships-pack/meshes/imperial/textures/Imperial_Blue.png" type="Texture" id=2]
+
+[sub_resource type="SpatialMaterial" id=1]
+albedo_texture = ExtResource( 2 )
+
+[node name="ImperialBlue" instance=ExtResource( 1 )]
+material/0 = SubResource( 1 )
